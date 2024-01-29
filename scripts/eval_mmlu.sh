@@ -4,7 +4,7 @@ NUM_SHOTS=0
 TASK_NAME=mmlu
 DEV_AVAILABLE=true
 
-source parse_eval_args.sh
+source scripts/parse_eval_args.sh
 
 SAVE_DIR=${SFT_EXPERIMENT_DIR}/mmlu/${EXPERIMENT_NAME}
 mkdir -p $SAVE_DIR

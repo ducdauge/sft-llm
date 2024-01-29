@@ -4,7 +4,7 @@ NUM_SHOTS=1
 TASK_NAME=tydiqa
 DEV_AVAILABLE=false
 
-source parse_eval_args.sh
+source scripts/parse_eval_args.sh
 
 SAVE_DIR=${SFT_EXPERIMENT_DIR}/tydiqa/${EXPERIMENT_NAME}
 mkdir -p $SAVE_DIR

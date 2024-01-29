@@ -4,7 +4,7 @@ NUM_SHOTS=8
 TASK_NAME=gsm
 DEV_AVAILABLE=false
 
-source parse_eval_args.sh
+source scripts/parse_eval_args.sh
 
 SAVE_DIR=${SFT_EXPERIMENT_DIR}/gsm/${EXPERIMENT_NAME}_cot
 mkdir -p $SAVE_DIR

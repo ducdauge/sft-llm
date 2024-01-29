@@ -4,7 +4,7 @@ NUM_SHOTS=3
 TASK_NAME=bbh
 DEV_AVAILABLE=false
 
-source parse_eval_args.sh
+source scripts/parse_eval_args.sh
 
 SAVE_DIR=${SFT_EXPERIMENT_DIR}/bbh/${EXPERIMENT_NAME}
 mkdir -p $SAVE_DIR
