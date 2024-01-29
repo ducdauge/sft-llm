@@ -936,7 +936,6 @@ def main():
                         if args.output_dir is not None:
                             output_dir = os.path.join(args.output_dir, output_dir)
                         save_state(output_dir)
-                        #save_with_accelerate(accelerator, model, tokenizer, output_dir, args)
 
                 if completed_steps >= args.max_train_steps:
                     break
@@ -946,7 +945,6 @@ def main():
             if args.output_dir is not None:
                 output_dir = os.path.join(args.output_dir, output_dir)
             save_state(output_dir)
-            #save_with_accelerate(accelerator, model, tokenizer, output_dir, args)
 
     if args.with_tracking:
         accelerator.end_training()
@@ -955,7 +953,6 @@ def main():
         accelerator.wait_for_everyone()
         if accelerator.is_main_process:
             tokenizer.save_pretrained(args.output_dir)
-        #accelerator.save_state(output_dir)
         save_with_accelerate(accelerator, model, tokenizer, args.output_dir, args)
 
 
