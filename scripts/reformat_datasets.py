@@ -26,7 +26,7 @@ import argparse
 from instruction_encode_templates import encode_instruction_example
 
 
-def convert_flan_v2_data(data_dir, output_dir, data_file="tulu_v1_resampled_flan_100k.jsonl"):
+def convert_flan_v2_data(data_dir, output_dir, data_file="tulu_v2_resampled_flan_50k.jsonl"):
     os.makedirs(output_dir, exist_ok=True)
     examples = []
     with open(os.path.join(data_dir, data_file), "r") as fin:

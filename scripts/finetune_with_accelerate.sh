@@ -8,7 +8,7 @@ DATASET="tulu_v2"
 if [[ "$DATASET" == "tulu_v2" ]]; then
     DATASET_ARG="--dataset_name allenai/tulu-v2-sft-mixture"
 elif [[ "$DATASET" == "flan_v2" ]]; then
-    DATASET_ARG="--train_file data/processed/flan_v2/flan_v2_data.jsonl"
+    DATASET_ARG="--dataset_name ostapeno/tulu_v2_flan_v2_subset"
 elif [[ "$DATASET" == "gpt4_alpaca" ]]; then
     DATASET_ARG="--train_file data/processed/gpt4_alpaca/gpt4_alpaca_data.jsonl"
 else
