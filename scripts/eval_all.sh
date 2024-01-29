@@ -33,7 +33,7 @@ fi
 
 for ((i=0;i<NUM_JOBS;i++)); do
     TS=(${TASKS_AND_SHOTS[i]})
-    sbatch $SFT_SLURM_ARGS ./eval/eval_${TS[0]}.sh \
+    sbatch $SFT_SLURM_ARGS ./scripts/eval_${TS[0]}.sh \
         --experiment_name ${NAME}_${TS[1]}shot_test \
         --model_name $MODEL_NAME \
         $PEFT_ARG \
