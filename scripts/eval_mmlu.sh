@@ -13,7 +13,7 @@ LOG_FILE="$SAVE_DIR/log.txt"
 python -m eval.mmlu.run_eval \
     $EVAL_DEV_ARG \
     --ntrain $NUM_SHOTS \
-    --data_dir ../data/eval/mmlu \
+    --data_dir data/eval/mmlu \
     --save_dir $SAVE_DIR \
     --model_name_or_path $MODEL_NAME \
     --tokenizer_name_or_path $MODEL_NAME \

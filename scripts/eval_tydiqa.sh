@@ -11,7 +11,7 @@ mkdir -p $SAVE_DIR
 LOG_FILE="$SAVE_DIR/log.txt"
 
 python -m eval.tydiqa.run_eval \
-    --data_dir ../data/eval/tydiqa/ \
+    --data_dir data/eval/tydiqa/ \
     --n_shot $NUM_SHOTS \
     --max_num_examples_per_lang 100 \
     --max_context_length 1024 \

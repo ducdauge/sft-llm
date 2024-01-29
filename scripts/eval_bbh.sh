@@ -11,7 +11,7 @@ mkdir -p $SAVE_DIR
 LOG_FILE="$SAVE_DIR/log.txt"
 
 python -m eval.bbh.run_eval \
-    --data_dir ../data/eval/bbh \
+    --data_dir data/eval/bbh \
     --save_dir ${SAVE_DIR}_cot \
     --model $MODEL_NAME \
     --tokenizer $MODEL_NAME \

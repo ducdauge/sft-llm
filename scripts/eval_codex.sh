@@ -12,7 +12,7 @@ LOG_FILE="$SAVE_DIR/log.txt"
 
 export TOKENIZERS_PARALLELISM=false
 python -m eval.codex_humaneval.run_eval \
-    --data_file ../data/eval/codex_humaneval/HumanEval.jsonl.gz \
+    --data_file data/eval/codex_humaneval/HumanEval.jsonl.gz \
     --eval_pass_at_ks 1 \
     --unbiased_sampling_size_n 20 \
     --temperature 0.1 \

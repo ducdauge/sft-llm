@@ -11,7 +11,7 @@ mkdir -p $SAVE_DIR
 LOG_FILE="$SAVE_DIR/log.txt"
 
 python -m eval.gsm.run_eval \
-    --data_dir ../data/eval/gsm \
+    --data_dir data/eval/gsm \
     --max_num_examples 200 \
     --save_dir ${SAVE_DIR} \
     --model $MODEL_NAME \
