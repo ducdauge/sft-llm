@@ -4,6 +4,8 @@ This is the code to replicate the instruction tuning experiments in the paper *S
 
 For our Sparse Fine-Tuning (SFT) implementation based on the Hugging Face library, please visit [peft](https://github.com/AlanAnsell/peft).
 
+![Sparse Fine Tuning Phases](media/sft_highres.gif)
+
 ## Setup
 First, install the Python libraries and initialise the [peft](https://github.com/AlanAnsell/peft) submodule.
 
