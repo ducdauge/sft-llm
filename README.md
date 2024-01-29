@@ -14,6 +14,8 @@ You can set `SFT_EXPERIMENT_DIR` to your preferred path for storing models and r
 ```bash
 pip install -r requirements.txt
 git submodule update --init --recursive
+cd peft
+python setup.py develop
 export SFT_EXPERIMENT_DIR=./results
 ```
 
