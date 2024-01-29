@@ -87,7 +87,6 @@ accelerate launch \
     $QPEFT_ARG \
     --sft_num_tunable_weights ${NUM_TUNABLE_WEIGHTS} \
     --peft_dtype $PEFT_DTYPE \
-    --sft_l2_reg 0 \
     --sft_selection $SFT_METHOD \
     --lora_rank $RANK \
     --lora_alpha 16 \
