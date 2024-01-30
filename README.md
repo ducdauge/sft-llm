@@ -43,7 +43,7 @@ You can specify your preferred LLM, PEFT method, quantization, and hyper-paramet
 Finally, you can run evaluation on all benchmarks (MMLU, BBH-Hard, GSM, TyDiQA, Codex-HumanEval) with the following script. Remember to specify the path to the trained PEFT parameters as `PEFT` and set the desired quantisation inside the script.
 
 ```bash
-./script/eval_all.sh
+./scripts/eval_all.sh
 ```
 
 ## Acknowledgements
