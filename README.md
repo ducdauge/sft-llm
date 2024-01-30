@@ -1,6 +1,6 @@
 # Scaling Sparse Fine-Tuning to Large Language Models
 
-This is the code to replicate the instruction tuning experiments in the paper *Scaling Sparse Fine-Tuning to Large Language Models*.
+This is the code to replicate the instruction tuning experiments in the paper [*Scaling Sparse Fine-Tuning to Large Language Models*](https://arxiv.org/abs/2401.16405). [[cite]](#citation)
 
 For our Sparse Fine-Tuning (SFT) implementation based on the Hugging Face library, please visit [peft](https://github.com/AlanAnsell/peft).
 
@@ -21,7 +21,7 @@ export SFT_EXPERIMENT_DIR=./results
 
 Next, prepare train and eval data. 
 
-Note that our original experiments were run based on [Flan v2 50K sub-mixture](https://beaker.org/api/v3/datasets/01HBS0N5ZSDF5AECA9VMB1RKXQ/files/flan_v2_resampled_50k.jsonl) sourced from Beaker, which now requires authorisation. Hence, we now rely on an unofficial snapshot from Hugging Face Hub.
+Note that our original experiments were run based on the [Flan v2 50K sub-mixture](https://beaker.org/api/v3/datasets/01HBS0N5ZSDF5AECA9VMB1RKXQ/files/flan_v2_resampled_50k.jsonl) stored on Beaker, which now requires authorisation for access. Hence, we now rely on an unofficial snapshot from the Hugging Face Hub.
 
 ```bash
 ./scripts/prepare_train_data.sh
@@ -48,3 +48,17 @@ Finally, you can run evaluation on all benchmarks (MMLU, BBH-Hard, GSM, TyDiQA, 
 
 ## Acknowledgements
 Our code and setup for the instruction tuning experiments builds on [open-instruct](https://github.com/allenai/open-instruct).
+
+## Citation
+Please use the following snippet to cite our work.
+
+```bibtex
+@misc{ansell2024scaling,
+      title={Scaling Sparse Fine-Tuning to Large Language Models}, 
+      author={Alan Ansell and Ivan Vulić and Hannah Sterz and Anna Korhonen and Edoardo M. Ponti},
+      year={2024},
+      eprint={2401.16405},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
