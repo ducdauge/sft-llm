@@ -35,7 +35,7 @@ To fine-tune an LLM with PEFT, run the following command.
 You can specify your preferred LLM, PEFT method, quantization, and hyper-parameters inside the script file.
 
 ```bash
-./script/finetune_peft_with_accelerate.sh
+./scripts/finetune_peft_with_accelerate.sh
 ```
 
 ## Eval
