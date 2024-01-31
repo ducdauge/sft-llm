@@ -72,7 +72,7 @@ NUM_GPUS=1
 BATCH_SIZE_PER_GPU=1
 TOTAL_BATCH_SIZE=128
 GRADIENT_ACC_STEPS=$(($TOTAL_BATCH_SIZE/$NUM_GPUS/$BATCH_SIZE_PER_GPU))
-echo "Training llama model ${MODEL_SIZE} using $NUM_GPUS GPUs, $BATCH_SIZE_PER_GPU batch size per GPU, $GRADIENT_ACC_STEPS gradient accumulation steps" >> $OUTPUT_DIR/log.txt
+echo "Training llama model ${MODEL_SIZE} using $NUM_GPUS GPUs, $BATCH_SIZE_PER_GPU batch size per GPU, $GRADIENT_ACC_STEPS gradient accumulation steps" | tee -a $OUTPUT_DIR/log.txt
 
 accelerate launch \
     --num_machines 1 \
@@ -107,4 +107,4 @@ accelerate launch \
     --output_dir $OUTPUT_DIR \
     --with_tracking \
     --report_to tensorboard \
-    --logging_steps 1 >> $OUTPUT_DIR/log.txt 2>&1
+    --logging_steps 1 2>&1 | tee -a $OUTPUT_DIR/log.txt

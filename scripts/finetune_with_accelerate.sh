@@ -51,4 +51,4 @@ accelerate launch \
     --output_dir ${SFT_EXPERIMENT_DIR}/flanv2_50K_${MODEL_SIZE}_fullft \
     --with_tracking \
     --report_to tensorboard \
-    --logging_steps 1 >> $OUTPUT_DIR/log.txt 2>&1
+    --logging_steps 1 2>&1 | tee -a $OUTPUT_DIR/log.txt
