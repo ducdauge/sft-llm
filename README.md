@@ -13,8 +13,12 @@ First, install the Python libraries and initialise the [peft](https://github.com
 
 You can set `SFT_EXPERIMENT_DIR` to your preferred path for storing models and results.
 
+Due to an issue with `flash-attn` you have to install it separately after installing the other requirements. 
+Note that `flash-attn` requires CUDA 11.6 or higher and a torch version that supports CUDA 11.6 or higher.
+
 ```bash
 pip install -r requirements.txt
+pip install flash-attn==2.2.2 
 git submodule update --init --recursive
 cd peft
 python setup.py develop
@@ -31,6 +35,8 @@ Note that our original experiments were run based on the [Flan v2 50K sub-mixtur
 ```
 
 ## Train
+
+**Note**: The training and evaluation scripts use the LLama-2 models. Make sure you have access to the models. You can request access [here](https://ai.meta.com/resources/models-and-libraries/llama-downloads/).
 
 To fine-tune an LLM with PEFT, run the following command.
 
